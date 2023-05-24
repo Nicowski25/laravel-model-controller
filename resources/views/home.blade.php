@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Model Controller</title>
-    @vite('resources/js/app.js')
-</head>
-<body>
-    <h1>Model Controller</h1>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container">
+    <h3>Welcome to Movies Home</h3>
+    <div class="row row-cols-1 row-cols-lg-3"></div>
+    @forelse ($movies as $movie)
+        <div class="col">
+            <div class="card">
+                <h3>{{ $movie->title }}</h3>
+            </div>
+        </div>
+    @empty
+        
+    @endforelse
+</div>
+
+@endsection
