@@ -12,7 +12,9 @@
             </div>
         </div>
     @empty
-        
+    <div class="col">
+        <h4>No movies found</h4>
+    </div>    
     @endforelse
 </div>
 
